@@ -112,13 +112,12 @@ def scrape_info():
         
         mars_info['hemisphere_img_urls'] = hemisphere_img_urls
         
-    collection.insert_one(mars_info)
-    
     browser.quit()
 
+    # collection.insert_one(mars_info)
+    
     return mars_info
 
     
-
 
 

@@ -43,12 +43,14 @@
                 </div>
             </div>                 
         </div>
-      
-    
-        <!-- --  -->
+      <hr>
+    <!-- --  -->
         <div class="container-fluid">
-            <h2 align = center>Mars Hemispheres</h2>
+            <h2 align = center> - Mars Hemispheres - </h2>
+            <hr>
             <div class="row">
+            
+            {%if mars_info%}
             {% for hemisphere in mars_info.hemisphere_img_urls[0:2] %}
             <div class="col-md-6">
                 <div class="img">
@@ -60,12 +62,12 @@
                   </div>
                 </div>
               </div>
-                    {% endfor %}
+                {% endfor %}
                 </div>
 
 
             <div class="row">
-                {% for hemisphere in mars_info.hemisphere_img_urls[2:4] %}
+            {% for hemisphere in mars_info.hemisphere_img_urls[2:4] %}
                 <div class="col-md-6">
                     <div class="img">
                       <img src="{{hemisphere['image_url']}}" alt="hemisphere" style="width:80%;">
@@ -76,8 +78,10 @@
                       </div>
                     </div>
                 </div>
-                        {% endfor %}
+            {% endfor %}
             </div>
+
+            {%endif%}
         </div>
 </body>
 </html>
